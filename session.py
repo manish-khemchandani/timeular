@@ -1,7 +1,6 @@
+import config
 import json
 import requests
-
-import config
 import urls
 
 HEADERS = {
