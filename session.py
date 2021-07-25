@@ -1,5 +1,7 @@
 import json
 import requests
+
+import config
 import urls
 
 HEADERS = {
@@ -14,8 +16,8 @@ class SessionManager(object):
 
     def login(self):
         payload = json.dumps({
-            "apiKey": "redacted",
-            "apiSecret": "redacted",
+            "apiKey": config.api_key,
+            "apiSecret": config.api_secret,
         })
         response = self.session.post(
             urls.SIGN_IN,
